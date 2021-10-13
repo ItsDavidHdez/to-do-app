@@ -5,6 +5,8 @@ import { TodoList } from "./components/TodoList";
 import { TodoSearch } from "./components/TodoSearch";
 import { CreateTodoButton } from "./components/CreateTodoButton/";
 import { TodoProvider, TodoContext } from "./context";
+import { Modal } from "./Modal";
+import { TodoForm } from "./TodoForm";
 
 function App() {
   return (
@@ -13,7 +15,15 @@ function App() {
         <TodoCounter />
         <TodoSearch />
         <TodoContext.Consumer>
-          {({ loading, error, searchedTodos, completeTodo, deleteTodo }) => {
+          {({
+            loading,
+            error,
+            searchedTodos,
+            completeTodo,
+            deleteTodo,
+            openModal,
+            setOpenModal,
+          }) => {
             return (
               <>
                 <TodoList>
@@ -32,11 +42,16 @@ function App() {
                     />
                   ))}
                 </TodoList>
+                {!!openModal && (
+                  <Modal>
+                    <TodoForm />
+                  </Modal>
+                )}
+                <CreateTodoButton />
               </>
             );
           }}
         </TodoContext.Consumer>
-        <CreateTodoButton />
       </TodoProvider>
     </>
   );
