@@ -27,10 +27,10 @@ function App() {
             return (
               <>
                 <TodoList>
-                  {loading && <p>Loading...</p>}
-                  {error && <p>Error...</p>}
+                  {loading && <p className="TodoList-info">Cargando...</p>}
+                  {error && <p className="TodoList-info">Error...</p>}
                   {!loading && !searchedTodos.length && (
-                    <p>Create a new TODO!</p>
+                    <p className="TodoList-info">¡Crea una nueva tarea!</p>
                   )}
                   {searchedTodos.map((todo) => (
                     <TodoItem
