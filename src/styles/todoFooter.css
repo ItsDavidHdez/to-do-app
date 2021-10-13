@@ -1,0 +1,14 @@
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.Footer-info {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}

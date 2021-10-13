@@ -7,6 +7,7 @@ import { CreateTodoButton } from "./components/CreateTodoButton/";
 import { TodoProvider, TodoContext } from "./context";
 import { Modal } from "./Modal";
 import { TodoForm } from "./TodoForm";
+import { TodoFooter } from "./components/TodoFooter";
 
 function App() {
   return (
@@ -22,7 +23,6 @@ function App() {
             completeTodo,
             deleteTodo,
             openModal,
-            setOpenModal,
           }) => {
             return (
               <>
@@ -53,6 +53,7 @@ function App() {
           }}
         </TodoContext.Consumer>
       </TodoProvider>
+      <TodoFooter />
     </>
   );
 }

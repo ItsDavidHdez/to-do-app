@@ -8,8 +8,8 @@ const TodoCounter = () => {
     <>
       <h2 className="TodoCounter">
         {totalTodos === 0
-          ? "No hay TODOs por completar"
-          : `Has completado ${completedTodos} de ${totalTodos} TODOs`}
+          ? "No hay TODOs por completar 🍻"
+          : `Has completado ${completedTodos} de ${totalTodos} TODOs ⚡`}
       </h2>
     </>
   );

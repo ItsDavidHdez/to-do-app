@@ -8,13 +8,13 @@ const TodoItem = ({ text, completed, onComplete, onDelete }) => {
         className={`Icon Icon-check ${completed && "Icon-check--active"}`}
         onClick={onComplete}
       >
-        {completed ? "✔" : "⛔"}
+        {completed ? "✅" : "⛔"}
       </span>
       <p className={`TodoItem-p ${completed && "TodoItem-p--complete"}`}>
         {text}
       </p>
       <span className="Icon Icon-delete" onClick={onDelete}>
-        ✖
+        🗑
       </span>
     </li>
   );
